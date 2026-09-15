@@ -32,13 +32,15 @@
   <div class="container">
     <p class="brand">GAMEYARD</p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: September 2026</p>
+    <p class="updated">Last updated: 15 September 2026</p>
 
     <p>
       Agile Catalyst Labs ("we," "us," or "our") operates the GameYard mobile application (the "App").
       This Privacy Policy explains how we handle information when you use our App.
-      GameYard is designed with privacy in mind — we do not operate user accounts or transmit
-      personal data to our own servers.
+      GameYard is designed with privacy in mind: there are no user accounts, no sign-in, and
+      nothing you do in a game is sent anywhere. The one time we receive anything from you
+      directly is when you choose to submit the feedback form in Settings &mdash; described in
+      &ldquo;Feedback you choose to send us&rdquo; below.
     </p>
 
     <h2>1. Information We Collect</h2>
@@ -116,9 +118,12 @@
         personalised to you.
       </li>
       <li>
-        <strong>iOS:</strong> we ask for App Tracking Transparency permission before the first ad is
-        ever shown. Decline it and you will see non-personalised ads. You can change this later in
-        Settings &rsaquo; Privacy &amp; Security &rsaquo; Tracking.
+        <strong>iOS:</strong> we ask for App Tracking Transparency permission once. Because the
+        App also uses it for advert attribution (see the Meta SDK below), the prompt normally
+        appears shortly after you first open the App rather than at your first advert; iOS shows
+        it at most once per install either way. Decline it and you will see non-personalised
+        adverts. You can change this later in Settings &rsaquo; Privacy &amp; Security &rsaquo;
+        Tracking.
       </li>
       <li>
         <strong>Android:</strong> you can opt out of ads personalisation, or delete your advertising
@@ -138,12 +143,60 @@
       Transparency permission described above. The App works normally if you decline.
     </p>
 
+    <h3>Feedback you choose to send us</h3>
+    <p>
+      Settings contains a feedback form. It is entirely optional, and nothing is sent unless you
+      fill it in and submit it. When you do, we receive:
+    </p>
+    <ul>
+      <li>The message you write and the category you pick (bug, idea, improvement, other)</li>
+      <li>Your email address, <strong>only if you choose to enter one</strong>, so we can reply</li>
+      <li>A screenshot, only if you choose to attach one</li>
+      <li>The App version, your device operating system and model, and your language</li>
+    </ul>
+    <p>
+      This is sent to a server operated by Agile Catalyst Labs on Google Cloud Run. We use it to
+      answer you and to fix what you report. We do not use it for advertising, and we do not share
+      it with third parties.
+    </p>
+
+    <h3>Reminders (local notifications)</h3>
+    <p>
+      If you turn on daily reminders, the App schedules them <strong>on your device</strong>. No
+      push token is created and no reminder passes through our servers or anyone else&rsquo;s. You
+      can turn them off in Settings or in your device&rsquo;s notification settings.
+    </p>
+
+    <h3>Configuration and updates</h3>
+    <ul>
+      <li>
+        <strong>Firebase Remote Config</strong> tells the App which features are switched on. The
+        App requests a configuration file; the request carries the same device and app information
+        Firebase services receive, and we send no personal data with it.
+      </li>
+      <li>
+        <strong>Expo Updates</strong> checks for over-the-air updates to the App&rsquo;s code. The
+        check reports the App version and platform so the correct update can be returned.
+      </li>
+      <li>
+        <strong>Photo library</strong> access is requested only when you choose to share a result
+        card to an app that reads from your camera roll. The App saves that one image and never
+        reads your library.
+      </li>
+    </ul>
+
     <h2>2. Information We Do Not Collect</h2>
     <ul>
-      <li>We do not create or store user accounts</li>
-      <li>We do not collect your name, email address, or contact information</li>
+      <li>We do not create or store user accounts, and the App has no sign-in</li>
+      <li>
+        We do not ask you for your name or contact details anywhere in the App. The one exception
+        is the feedback form, where an email address is optional and is used only to reply to you
+        &mdash; see &ldquo;Feedback you choose to send us&rdquo; above.
+      </li>
       <li>We do not record gameplay, card responses, or any in-game content you interact with</li>
       <li>We do not collect precise location data (GPS)</li>
+      <li>We do not send push notifications, and we do not register a push token for your device</li>
+      <li>We do not sell your personal information</li>
     </ul>
 
     <h2>3. How We Use Information</h2>
@@ -167,6 +220,9 @@
       <li><strong>Google Firebase Analytics</strong> — aggregate usage analytics and crash diagnostics. <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a></li>
       <li><strong>Google AdMob</strong> — advertising in the single-player games. <a href="https://policies.google.com/technologies/ads" target="_blank">Privacy Policy</a></li>
       <li><strong>Expo Updates</strong> — over-the-air app updates. <a href="https://expo.dev/privacy" target="_blank">Privacy Policy</a></li>
+      <li><strong>Google Firebase Remote Config</strong> — decides which features are switched on. <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy</a></li>
+      <li><strong>Meta (Facebook) SDK</strong> — measures app installs and purchases so we can tell which adverts work. It sends advertising events only where you allowed tracking; where you declined, advertiser tracking is switched off before the SDK starts. <a href="https://www.facebook.com/privacy/policy/" target="_blank">Privacy Policy</a></li>
+      <li><strong>Agile Catalyst Labs feedback service</strong> (Google Cloud Run) — receives only what you submit through the feedback form. Operated by us.</li>
     </ul>
     <p>
       Purchases are ultimately processed by Apple (App Store) or Google (Google Play), each with their
@@ -234,7 +290,7 @@
     </p>
 
     <hr />
-    <p class="footer">&copy; 2025 Agile Catalyst Labs. All rights reserved.</p>
+    <p class="footer">&copy; 2026 Agile Catalyst Labs. All rights reserved.</p>
   </div>
 </body>
 </html>
